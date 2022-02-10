@@ -53,9 +53,8 @@ public class Main {
         System.out.println("\n_______________________\nTerms and conditions:");
         for(Map<String, Object> m : ma) {
             for (String name : m.keySet()) {
-                String key = name;
                 String value = m.get(name).toString();
-                System.out.println(key + " " + value);
+                System.out.println(name + " " + value);
             }
         }
     }
