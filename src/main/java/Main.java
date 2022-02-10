@@ -38,7 +38,6 @@ public class Main {
         }
         ProfilesConfigFile pcf = new ProfilesConfigFile(new File(System.getProperty("user.home") + "/.aws/config"));
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
-                .withRegion(Regions.EU_WEST_1)
                 .withCredentials(new StaticCredentialsProvider(pcf.getCredentials(profile)))
                 .build();
         DynamoDB dynamoDB = new DynamoDB(client);
